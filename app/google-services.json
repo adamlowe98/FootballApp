@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "167570130536",
+    "firebase_url": "https://football-transfer-3a7aa.firebaseio.com",
+    "project_id": "football-transfer-3a7aa",
+    "storage_bucket": "football-transfer-3a7aa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167570130536:android:928527e464e3ad85",
+        "android_client_info": {
+          "package_name": "com.example.assignment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167570130536-nraqoro3atss1m84igvr14n5afvovntu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.assignment",
+            "certificate_hash": "4d47c4b9bf14a0f8e24c9fc7c8acc0bae6c62317"
+          }
+        },
+        {
+          "client_id": "167570130536-peinpl48gto08b21a2265cqqk86gdq9a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjHGUiRKjQSjYqcyma0_d_vrmuk12Ml4k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167570130536-peinpl48gto08b21a2265cqqk86gdq9a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

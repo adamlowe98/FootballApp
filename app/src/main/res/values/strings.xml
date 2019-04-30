@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Transfer App</string>
+    <string name="button_addPlayer">Add Player</string>
+    <string name="playerTitle">Player Name</string>
+    <string name="hint_playerTeam">Team</string>
+    <string name="playerCost">Transfer Value</string>
+    <string name="playerPos">Player Position</string>
+    <string name="menu_addPlayer">Add</string>
+    <string name="button_addImage">Add Image</string>
+    <string name="select_player_image">Select player image</string>
+    <string name="menu_cancelPlayer">Cancel</string>
+    <string name="enter_player_title">Please enter a Player Name</string>
+    <string name="save_player">Save Player</string>
+    <string name="change_player_image">Change player image</string>
+    <string name="button_location">Set Location</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="menu_deletePlayer">Delete</string>
+    <string name="title_activity_player_maps">Map of All Players </string>
+</resources>
