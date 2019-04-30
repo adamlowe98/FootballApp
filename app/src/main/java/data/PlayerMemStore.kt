@@ -10,6 +10,9 @@ internal fun getId(): Long {
 }
 
 class PlayerMemStore : PlayerStore, AnkoLogger {
+     fun findById(id: Long): PlayerModel? {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
 
     val players = ArrayList<PlayerModel>()
 

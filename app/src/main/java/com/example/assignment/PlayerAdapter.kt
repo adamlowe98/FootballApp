@@ -2,12 +2,12 @@ package com.example.assignment
 
 
 import android.os.Bundle
+import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+
 import data.PlayerModel
 import helpers.readImageFromPath
 import kotlinx.android.synthetic.main.activity_player_list.view.*
@@ -40,7 +40,7 @@ class PlayerAdapter constructor(private var players: List<PlayerModel>,
             itemView.team.text = player.team
             itemView.cost.text = player.cost
             itemView.Pos.text = player.Pos
-            Glide.with(itemView.context).load(player.image).into(itemView.imageIcon);
+            itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, player.image))
             itemView.setOnClickListener { listener.onPlayerClick(player) }
         }
     }

@@ -20,6 +20,13 @@ fun generateRandomId(): Long {
 
 
  class PlayerJSONStore : PlayerStore, AnkoLogger {
+      fun findById(id: Long): PlayerModel? {
+         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+     }
+
+      fun logAll() {
+         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+     }
 
      val context: Context
      var players = mutableListOf<PlayerModel>()

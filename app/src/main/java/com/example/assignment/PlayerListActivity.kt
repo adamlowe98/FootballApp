@@ -3,9 +3,9 @@ package com.example.assignment
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import androidx.recyclerview.widget.LinearLayoutManager
 import data.PlayerModel
 import kotlinx.android.synthetic.main.activity_player_list.*
 import main.MainApp
