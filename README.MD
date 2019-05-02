@@ -1,6 +1,7 @@
 # Assigment
 
 Introduction
+
 For the Mobile App Development module in semester 6 where I am required to create an app that implements CRUD (Create, Read, Update and Delete) for data entered by the user into the app which is then stored in a JSON file.
 The app that I created is a Football Player App which allows a user to save information about their favourite players which they could use to save players they plan on buying in FIFA so they have all the information they need on the player before buying them for their team.
 The user can enter the Full name of the player, the player’s age, the league the player plays in, the team the player plays for, the position the player plays in for the team, the cost of the player in the transfer market, an image of the player and finally the location of the player.
