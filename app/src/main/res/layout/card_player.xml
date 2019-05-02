@@ -19,10 +19,16 @@
                 android:textSize="30sp"/>
 
         <TextView
-                android:id="@+id/description"
+                android:id="@+id/Age"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/playerTitle"/>
+
+        <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Age"/>
 
         <TextView
                 android:id="@+id/team"
@@ -42,6 +48,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/cost"/>
+
+        <TextView
+                android:id="@+id/League"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Pos"/>
 
         <ImageView
                 android:id="@+id/imageIcon"

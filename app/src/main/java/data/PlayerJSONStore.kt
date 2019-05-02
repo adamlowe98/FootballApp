@@ -10,6 +10,7 @@ import read
 import write
 import java.util.*
 
+
 val JSON_FILE = "players.json"
 val gsonBuilder = GsonBuilder().setPrettyPrinting().create()
 val listType = object : TypeToken<java.util.ArrayList<PlayerModel>>() {}.type
@@ -20,14 +21,6 @@ fun generateRandomId(): Long {
 
 
  class PlayerJSONStore : PlayerStore, AnkoLogger {
-      fun findById(id: Long): PlayerModel? {
-         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-     }
-
-      fun logAll() {
-         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-     }
-
      val context: Context
      var players = mutableListOf<PlayerModel>()
 
@@ -54,9 +47,11 @@ fun generateRandomId(): Long {
          var foundPlayer: PlayerModel? = playersList.find { p -> p.id == player.id }
          if (foundPlayer != null) {
              foundPlayer.title = player.title
+             foundPlayer.Age = player.Age
              foundPlayer.team = player.team
              foundPlayer.cost = player.cost
              foundPlayer.Pos = player.Pos
+             foundPlayer.League = player.League
              foundPlayer.image = player.image
              foundPlayer.lat = player.lat
              foundPlayer.lng = player.lng

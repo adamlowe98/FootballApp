@@ -31,19 +31,32 @@ class PlayerAdapter constructor(private var players: List<PlayerModel>,
         holder.bind(player, listener)
     }
 
+
+    fun filterList(filteredPlayerList: ArrayList<PlayerModel>){
+        this.players= filteredPlayerList
+        notifyDataSetChanged()
+    }
+
     override fun getItemCount(): Int = players.size
 
     class MainHolder constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
+        var args = Bundle()
         fun bind(player: PlayerModel, listener : PlayerListener) {
             itemView.playerTitle.text = player.title
+            itemView.Age.text = player.Age
             itemView.team.text = player.team
             itemView.cost.text = player.cost
             itemView.Pos.text = player.Pos
+            itemView.League.text = player.League
             itemView.imageIcon.setImageBitmap(readImageFromPath(itemView.context, player.image))
-            itemView.setOnClickListener { listener.onPlayerClick(player) }
+            itemView.setOnClickListener { listener.onPlayerClick(player)
+                getPosition = adapterPosition}}
         }
+        companion object {
+            var getPosition: Int = 0
+        }
+
     }
-}
+
 
 

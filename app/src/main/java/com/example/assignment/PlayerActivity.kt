@@ -37,9 +37,11 @@ class PlayerActivity : AppCompatActivity(), AnkoLogger {
             edit = true
             player = intent.extras.getParcelable<PlayerModel>("player_edit")
             playerTitleET.setText(player.title)
+            playerAgeET.setText(player.Age)
             playerTeamET.setText(player.team)
             playerCostET.setText(player.cost)
             playerPosET.setText(player.Pos)
+            playerLeagueET.setText(player.League)
             playerImage.setImageBitmap(readImageFromPath(this, player.image))
             if (player.image != null) {
                 chooseImage.setText(R.string.change_player_image)
@@ -49,9 +51,11 @@ class PlayerActivity : AppCompatActivity(), AnkoLogger {
 
         btnAdd.setOnClickListener() {
             player.title = playerTitleET.text.toString()
+            player.Age = playerAgeET.text.toString()
             player.team = playerTeamET.text.toString()
             player.cost = playerCostET.text.toString()
             player.Pos = playerPosET.text.toString()
+            player.League = playerLeagueET.text.toString()
             if (player.title.isEmpty()) {
                 toast(R.string.enter_player_title)
             } else {

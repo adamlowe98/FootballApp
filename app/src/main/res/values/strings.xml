@@ -5,6 +5,8 @@
     <string name="hint_playerTeam">Team</string>
     <string name="playerCost">Transfer Value</string>
     <string name="playerPos">Player Position</string>
+    <string name="playerAge">Player Age</string>
+    <string name="playerLeague">League</string>
     <string name="menu_addPlayer">Add</string>
     <string name="button_addImage">Add Image</string>
     <string name="select_player_image">Select player image</string>
@@ -16,4 +18,7 @@
     <string name="title_activity_maps">Map</string>
     <string name="menu_deletePlayer">Delete</string>
     <string name="title_activity_player_maps">Map of All Players </string>
+    <string name="product">Product</string>
+    <string name="menu_search">Search</string>
+
 </resources>

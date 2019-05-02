@@ -17,18 +17,26 @@ import org.jetbrains.anko.startActivityForResult
 class PlayerListActivity : AppCompatActivity(), PlayerListener {
 
     lateinit var app: MainApp
+    var playerAdapter:PlayerAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_player_list)
         app = application as MainApp
+
+
+
         toolbarMain.title = title
         setSupportActionBar(toolbarMain)
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = PlayerAdapter(app.players.findAll(), this)
-        loadPlayers()
+        playerAdapter = PlayerAdapter(app.players.findAll(), this)
+        recyclerView.adapter  = playerAdapter
+        recyclerView.adapter?.notifyDataSetChanged()
+        searchBtn.setOnClickListener{
+            searchPlayers(searchMyPlayers.text.toString())
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -48,9 +56,9 @@ class PlayerListActivity : AppCompatActivity(), PlayerListener {
         startActivityForResult(intentFor<PlayerActivity>().putExtra("player_edit", player), 0)
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        loadPlayers()
-        super.onActivityResult(requestCode, resultCode, data)
+ override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+       loadPlayers()
+       super.onActivityResult(requestCode, resultCode, data)
     }
 
     private fun loadPlayers() {
@@ -59,7 +67,18 @@ class PlayerListActivity : AppCompatActivity(), PlayerListener {
 
     fun showPlayers(players: List<PlayerModel>) {
         recyclerView.adapter = PlayerAdapter(players, this)
-        recyclerView.adapter?.notifyDataSetChanged()
+
+    }
+
+    fun searchPlayers(search: String){
+        var playerList: ArrayList<PlayerModel> = ArrayList()
+        for (searchPlayer in app.players.findAll()){
+            if (searchPlayer.title.toLowerCase().contains(search.toLowerCase())){
+                playerList.add(searchPlayer)
+                playerAdapter!!.filterList(playerList)
+
+            }
+        }
     }
 
 }

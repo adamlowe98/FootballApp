@@ -61,6 +61,19 @@
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="14sp"/>
 
+                <EditText
+                        android:id="@+id/playerAgeET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:hint="@string/playerAge"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"/>
+
 
                 <EditText
                         android:id="@+id/playerTeamET"
@@ -94,6 +107,19 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="8dp"
                         android:hint="@string/playerPos"
+                        android:inputType="text"
+                        android:maxLength="25"
+                        android:maxLines="1"
+                        android:padding="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"/>
+
+                <EditText
+                        android:id="@+id/playerLeagueET"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:hint="@string/playerLeague"
                         android:inputType="text"
                         android:maxLength="25"
                         android:maxLines="1"

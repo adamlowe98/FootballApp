@@ -31,9 +31,11 @@ class PlayerMemStore : PlayerStore, AnkoLogger {
         var foundPlayer: PlayerModel? = playersList.find { p -> p.id == player.id }
         if (foundPlayer != null) {
             foundPlayer.title = player.title
+            foundPlayer.Age = player.Age
             foundPlayer.team = player.team
             foundPlayer.cost = player.cost
             foundPlayer.Pos = player.Pos
+            foundPlayer.League = player.League
             foundPlayer.image = player.image
             logAll()
         }
