@@ -126,3 +126,6 @@ class PlayerActivity : AppCompatActivity(), AnkoLogger {
         return super.onOptionsItemSelected(item)
     }
 }
+
+
+//allow commit
